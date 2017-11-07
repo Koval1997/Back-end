@@ -28,7 +28,7 @@ class userController extends Controller{
 
     public function edit($data) {
 
-        $_PUT=json_decode(file_get_contents('php://input'));
+        $_PUT=json_decode(file_get_contents('php://input'),true);
 
         if((isset($_PUT['id']))&&(isset($_PUT['name']))&&(isset($_PUT['score']))){
             // мы передаем в модель массив с данными
